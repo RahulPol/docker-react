@@ -9,5 +9,6 @@ RUN npm run build
 # Next step is to start nginx server that will serve our production ready code
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
